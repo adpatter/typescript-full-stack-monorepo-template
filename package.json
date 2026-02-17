@@ -1,0 +1,41 @@
+{
+  "name": "typescript-full-stack-monorepo-template",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "format": "npm run format:api && npm run format:web",
+    "format:api": "npm run format --workspace=api",
+    "format:web": "npm run format --workspace=web",
+    "lint": "npm run lint:api && npm run lint:web",
+    "lint:api": "npm run lint --workspace=api",
+    "lint:web": "npm run lint --workspace=web",
+    "build": "npm run build:api && npm run build:web",
+    "build:web": "npm run build --workspace=web",
+    "build:api": "npm run clean --workspace=api && npm run build --workspace=api",
+    "start": "npm run start --workspace=api",
+    "monitor:api": "nodemon --config nodemon.api.json",
+    "monitor:web": "nodemon --config nodemon.web.json",
+    "monitor": "nodemon ."
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/far-analytics/typescript-full-stack-monorepo-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prettier": "^3.8.1"
+  }
+}
