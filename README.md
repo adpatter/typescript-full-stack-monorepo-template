@@ -7,7 +7,7 @@ A minimal full-stack TypeScript template. The API serves static assets over HTTP
 - Node.js `>=24.0.0`
 - npm `>=11.0.0`
 
-## Setup
+## Deploy
 
 1. Install dependencies at the repo root:
 
