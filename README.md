@@ -29,7 +29,7 @@ cp .env.example .env
 
 4. Update `.env` values (see [Environment Variables](#environment-variables) below).
 
-5. Run the server.
+5. Run the server:
 
 ```bash
 npm run start
@@ -57,6 +57,18 @@ From the repo root:
 npm run build
 ```
 
+- Build api:
+
+```bash
+npm run build:api
+```
+
+- Build web:
+
+```bash
+npm run build:api
+```
+
 ### Lint
 
 - Lint all:
@@ -65,12 +77,36 @@ npm run build
 npm run lint
 ```
 
+- Lint api:
+
+```bash
+npm run lint:api
+```
+
+- Lint web:
+
+```bash
+npm run lint:web
+```
+
 ### Format
 
 - Format all:
 
 ```bash
 npm run format
+```
+
+- Format api:
+
+```bash
+npm run format:api
+```
+
+- Format web:
+
+```bash
+npm run format:web
 ```
 
 ### Run the server
@@ -83,10 +119,22 @@ npm run start
 
 ### Watch for changes
 
-- Watch mode:
+- Watch all:
 
 ```bash
 npm run monitor
+```
+
+- Watch api:
+
+```bash
+npm run monitor:api
+```
+
+- Watch web:
+
+```bash
+npm run monitor:web
 ```
 
 ## Project Structure
