@@ -7,7 +7,7 @@ A minimal full-stack TypeScript template. The API serves static assets over HTTP
 - Node.js `>=24.0.0`
 - npm `>=11.0.0`
 
-## Deploy
+## Setup
 
 1. Install dependencies at the repo root:
 
@@ -29,7 +29,7 @@ cp .env.example .env
 
 4. Update `.env` values (see [Environment Variables](#environment-variables) below).
 
-5. Run the server:
+5. Run the server.
 
 ```bash
 npm run start
@@ -41,7 +41,7 @@ The API reads these values from `.env`:
 
 - `KEY_PATH`: Path to your TLS private key.
 - `CERT_PATH`: Path to your TLS certificate.
-- `WEB_ROOT`: Absolute path to the web build output (e.g. `[...]/apps/web/dist`).
+- `WEB_ROOT`: Absolute path to the web build output (e.g. `./apps/web/dist`).
 - `HOST_NAME`: Bind address (e.g. `0.0.0.0`).
 - `PORT`: HTTPS port (e.g. `8443`).
 
@@ -57,18 +57,6 @@ From the repo root:
 npm run build
 ```
 
-- Build api:
-
-```bash
-npm run build:api
-```
-
-- Build web:
-
-```bash
-npm run build:api
-```
-
 ### Lint
 
 - Lint all:
@@ -77,36 +65,12 @@ npm run build:api
 npm run lint
 ```
 
-- Lint api:
-
-```bash
-npm run lint:api
-```
-
-- Lint web:
-
-```bash
-npm run lint:web
-```
-
 ### Format
 
 - Format all:
 
 ```bash
 npm run format
-```
-
-- Format api:
-
-```bash
-npm run format:api
-```
-
-- Format web:
-
-```bash
-npm run format:web
 ```
 
 ### Run the server
@@ -119,22 +83,10 @@ npm run start
 
 ### Watch for changes
 
-- Watch all:
+- Watch mode:
 
 ```bash
 npm run monitor
-```
-
-- Watch api:
-
-```bash
-npm run monitor:api
-```
-
-- Watch web:
-
-```bash
-npm run monitor:web
 ```
 
 ## Project Structure
