@@ -1,7 +1,7 @@
 {
   "name": "typescript-full-stack-monorepo-template",
   "version": "0.0.1",
-  "description": "",
+  "description": "TypeScript full-stack monorepo template.",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -10,14 +10,17 @@
   ],
   "scripts": {
     "format": "npm run format:api && npm run format:web",
+    "format:lint": "npm run format && npm run lint",
     "format:api": "npm run format --workspace=api",
     "format:web": "npm run format --workspace=web",
     "lint": "npm run lint:api && npm run lint:web",
+    "lint:all": "npm run lint",
     "lint:api": "npm run lint --workspace=api",
     "lint:web": "npm run lint --workspace=web",
     "build": "npm run build:api && npm run build:web",
-    "build:web": "npm run build --workspace=web",
-    "build:api": "npm run clean --workspace=api && npm run build --workspace=api",
+    "build:web": "npm run clean:build --workspace=web",
+    "build:api": "npm run clean:build --workspace=api",
+    "check": "npm run lint:all && npm run build",
     "start": "npm run start --workspace=api",
     "monitor:api": "nodemon --config nodemon.api.json",
     "monitor:web": "nodemon --config nodemon.web.json",
@@ -35,7 +38,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.10",
-    "prettier": "^3.8.1"
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.6"
   }
 }

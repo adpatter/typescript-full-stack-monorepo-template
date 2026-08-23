@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
-    "types": ["@types/node"],
+    "types": ["node"],
     "noEmit": true,
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "module": "node16",
+    "moduleResolution": "node16",
+    "baseUrl": ".",
+    "strict": true
   },
   "extends": "./tsconfig.json",
-  "include": ["eslint.config.js"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
+  "exclude": ["**/dist/**", "**/node_modules/**"]
 }
